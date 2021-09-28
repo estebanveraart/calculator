@@ -145,54 +145,23 @@ buttonDivisionInput = document.querySelector('.buttonDi');
 buttonMultiplicationInput = document.querySelector('.buttonFois');
 buttonSubtractionInput = document.querySelector('.buttonMoins');
 buttonSumInput = document.querySelector('.buttonPlus');
-buttonResultFinal = document.querySelector('.buttonEgal')
+buttonResultFinal = document.querySelector('.buttonEgal');
+let arrButton = [buttonVal0, buttonVal1, buttonVal2, buttonVal3, buttonVal4, buttonVal5, buttonVal6, buttonVal7, buttonVal8, buttonVal9, buttonDivisionInput, buttonMultiplicationInput, buttonSubtractionInput, buttonSumInput]
+let arrButtonValue = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "/", "*", "-", "+"]
+
 
 function computeResult(str){
     return Function('return ' + str)()
 }
 
-buttonVal0.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "0";
+for (let i = 0; i < 14; i++) {
+    
+    arrButton[i].onclick = function(){
+        inputCalcul.value = inputCalcul.value + arrButtonValue[i];
+    }
+    
 }
-buttonVal1.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "1";
-}
-buttonVal2.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "2";
-}
-buttonVal3.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "3";
-}
-buttonVal4.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "4";
-}
-buttonVal5.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "5";
-}
-buttonVal6.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "6";
-}
-buttonVal7.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "7";
-}
-buttonVal8.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "8";
-}
-buttonVal9.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "9";
-}
-buttonDivisionInput.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "/";
-}
-buttonMultiplicationInput.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "*";
-}
-buttonSubtractionInput.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "-";
-}
-buttonSumInput.onclick = function(){
-    inputCalcul.value = inputCalcul.value + "+";
-}
+
 buttonClearInput.onclick = function(){
     inputCalcul.value = "";
 }
