@@ -9,4 +9,4 @@ like the previous exercises, I first made an html css version only to have an ov
 
 the calculator is also responsive
 
-<img src="calculatrice responsive">
+<img src="calculatrice responsive.png">
